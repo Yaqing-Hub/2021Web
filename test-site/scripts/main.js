@@ -1,5 +1,3 @@
-
-
 document.querySelector('html').onclick = function() {
     alert('别戳我，我怕疼。');
 }
@@ -14,14 +12,14 @@ function setUserName() {
         setUserName();
     } else {
         localStorage.setItem('name', myName);
-        myHeading.innerHTML = 'Harry Potter 酷毙了，' + myName;
+        myHeading.innerHTML = '欢迎来到哈利波特的世界，' + myName;
     }
 }
 if(!localStorage.getItem('name')) {
     setUserName();
 } else {
     let storedName = localStorage.getItem('name');
-    myHeading.textContent = 'Harry Potter 酷毙了，' + storedName;
+    myHeading.textContent = '欢迎来到哈利波特的世界，' + storedName;
 }
 myButton.onclick = function() {
     setUserName();
